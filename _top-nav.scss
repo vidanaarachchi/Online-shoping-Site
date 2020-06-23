@@ -1,0 +1,73 @@
+.main-menu {
+    @include side-menu-links;
+    margin-left: 20px;
+    text-align: left;
+
+    li {
+        padding: 10px 5px;
+    }
+
+}
+
+.top-nav {
+    top: 0;
+    background-color: $header-color;
+    height: 75px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: 111;
+
+    #btn {
+        top: 18px;
+    }
+
+    #cancel {
+        top: 75px;
+    }
+
+    .side-menu {
+        top: 75px;
+    }
+
+    span {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        color: $light-color;
+
+        h3 {
+            font-size: 22px;
+        }
+    }
+
+    .logo {
+        padding: 15px;
+        float: left;
+        color: $light-color;
+
+        #icon {
+            font-size: 25px;
+            display: flex;
+        }
+    }
+
+    .search-box {
+        @include search-box;
+        width: 500px;
+        color: white;
+        margin: 0 auto;
+
+        input {
+            width: 450px;
+        }
+    }
+}

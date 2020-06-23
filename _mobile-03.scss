@@ -1,0 +1,46 @@
+@include mobile-view-03 {
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .right-column {
+        height: 100%;
+        width: 100%;
+        visibility: visible;
+    }
+
+    .cart-title {
+        position: fixed;
+        width: 100%;
+        top: 150px;
+    }
+
+    .payment-cart {
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .cart-items {
+
+        span,
+        div {
+            padding: 0 20px;
+        }
+    }
+
+    .dis {
+        margin-top: -46vh;
+    }
+
+    .dis-mobile {
+        position: static;
+        width: 100%;
+        visibility: visible;
+    }
+
+    .footer {
+        @include mobile-footer;
+    }
+}

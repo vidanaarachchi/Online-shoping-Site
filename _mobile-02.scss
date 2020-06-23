@@ -1,0 +1,65 @@
+@include mobile-view-02 {
+    //page 2 responsive styles
+    //only product view and sliding
+
+    .view-product {
+        height: auto;
+        width: 100%;
+        // border: 1px solid $dark-color;
+        margin-left: 10px;
+        padding: 10px;
+        display: inline-flex;
+        margin-top: 15px;
+
+
+        img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid $dark-color;
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            width: auto;
+            font-size: 15px;
+
+            li {
+                margin: 10px;
+                line-height: 1.5;
+                display: flex;
+
+                strong {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        span {
+            margin: 130px 10px 0 -265px;
+            display: flex;
+            border: 1px solid $dark-color;
+            padding: 10px;
+            height: 35px;
+            width: auto;
+            font-size: 15px;
+
+            strong {
+                margin: 0 15px;
+            }
+        }
+
+        input {
+            margin: 130px 10px;
+            height: 35px;
+            width: 150px;
+            background-color: white;
+            border-radius: 25px;
+            border: 1px solid $dark-color;
+
+            &:hover {
+                background-color: $header-color;
+            }
+        }
+    }
+}

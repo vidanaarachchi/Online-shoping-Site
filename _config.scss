@@ -1,0 +1,391 @@
+$light-color: #ffffff;
+$header-color: #26a858;
+$dark-color: #000;
+$sub-nav-color: #ffffff;
+$side-bar-color: #ffffff;
+$btn-light: #ffffff;
+$btn-dark: #26a858;
+/**#6be76b**/
+
+@mixin card {
+    background-color: white;
+    margin-top: 5px;
+}
+
+@mixin side-img-bg {
+    @include card;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    width: 97%;
+    padding: 10px;
+    object-fit: fill;
+
+}
+
+@mixin product {
+    @include card;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: $dark-color;
+    width: 100%;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 2px;
+            width: 140px;
+
+            strong {
+                margin: 10px 0px 5px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    img {
+        width: 135px;
+        height: 100px;
+        border: 1px solid $dark-color;
+    }
+
+    p {
+        font-size: 14px;
+        width: 140px;
+        margin: 10px 0px 5px;
+    }
+
+    button {
+        width: 140px;
+        height: 30px;
+        border: 1px solid $dark-color;
+        border-radius: 30px;
+        background-color: $btn-light;
+        margin: 0 auto;
+        font-size: 13px;
+        margin-bottom: 5px;
+
+        &:hover {
+            background-color: $btn-dark;
+            color: $light-color;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+
+    #icon {
+        font-size: 16px;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+        small {
+            font-size: 16px;
+            margin-right: 7px;
+        }
+    }
+}
+
+
+@mixin banner {
+    border: 1px solid $dark-color;
+    margin: 5px;
+
+    img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@mixin cart-title {
+    z-index: 13;
+    position: fixed;
+    background-color: $header-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    overflow: hidden;
+    float: right;
+    width: 25%;
+    color: $light-color;
+    border-top: 1px solid $light-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+
+    span {
+        font-size: 15px;
+    }
+}
+
+@mixin side-menu {
+    z-index: 2;
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: $header-color;
+    transition: all ease 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    header {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        background-color: $header-color;
+        user-select: none;
+        border-bottom: 1px solid $light-color;
+    }
+
+}
+
+@mixin side-menu-links {
+    list-style-type: none;
+    text-align: left;
+
+    a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 30px;
+        font-size: 20px;
+        color: $light-color;
+        box-sizing: border-box;
+        border-bottom: 1px solid $light-color;
+        border-top: 1px solid rgbg(255, 255, 225, 1);
+
+
+        &:hover {
+            padding-left: 50px;
+            transition: 0.5s;
+            color: $dark-color;
+        }
+
+    }
+}
+
+@mixin search-box {
+    width: 400px;
+    height: 30px;
+    border: 1px solid $light-color;
+    border-radius: 10px;
+    background-color: $header-color;
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+
+    input {
+        border: none;
+        background-color: $header-color;
+        color: $light-color;
+        align-items: center;
+        font-size: 15px;
+        width: 350px;
+        height: 25px;
+        padding: 5px;
+    }
+}
+
+@mixin cart-items {
+    color: $dark-color;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+
+    span {
+        display: flex;
+        align-items: center;
+        float: center;
+        padding: 0px 5px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        float: center;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        border: 1px solid $dark-color;
+        margin: 5px;
+    }
+
+    p {
+        height: 60px;
+        width: 200px;
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    small {
+        padding: 0px 25px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    strong {
+        margin: 0px 25px;
+    }
+}
+
+@mixin hr {
+    border: 0.5px solid $dark-color;
+    width: 90%;
+    margin-left: 5%;
+}
+
+@mixin cart-footer {
+    color: $dark-color;
+    padding: 10px;
+    background-color: white;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+    button {
+        width: 300px;
+        height: 40px;
+        border: 1px solid $dark-color;
+        border-radius: 25px;
+        font-size: 17px;
+        font-weight: 600;
+        background-color: $btn-light;
+
+        &:hover {
+            background-color: $btn-dark;
+            color: $light-color;
+        }
+    }
+}
+
+@mixin btn {
+    left: 15px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+
+@mixin cancel {
+    z-index: 3;
+    left: -195px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+
+@mixin footer {
+    padding: 10px 15px 10px;
+    text-align: left;
+    background: $header-color;
+    height: 100px;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    #bottom-logo {
+        margin: 0px 5px 5px 0px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h5 {
+        margin-left: 25px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            margin: 5px;
+            font-size: 13.5px;
+            color: $light-color;
+        }
+    }
+
+    #card-collection {
+        margin-bottom: 20px;
+        font-size: 16px;
+
+        span {
+            font-size: 25px;
+        }
+    }
+}
+
+@mixin mobile-footer {
+    width: 100%;
+    height: 125px;
+    font-size: 15px;
+    padding: 15px 5px;
+    align-items: flex-start;
+
+    #card-collection {
+        margin-bottom: 0;
+    }
+}
+
+
+// Mobile responsive
+
+@mixin hide {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+
+//page 01
+@mixin mobile-view-01 {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}
+
+//page 02
+@mixin mobile-view-02 {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}
+
+
+//page 03
+@mixin mobile-view-03 {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}
+
+//page 05
+@mixin mobile-view-05 {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}
+
+//page 06
+@mixin mobile-view-06 {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}

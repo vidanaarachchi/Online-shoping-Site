@@ -1,0 +1,50 @@
+.payment-cart {
+    margin-top: 53px;
+
+}
+
+.cart-title {
+    @include cart-title;
+}
+
+hr {
+    @include hr;
+}
+
+.cart-items {
+    input {
+        margin-left: 10px;
+    }
+
+    @include cart-items;
+}
+
+.payment-option {
+    display: grid;
+    padding: 10px;
+
+    span {
+        margin-bottom: 5px;
+    }
+
+    strong {
+        margin-top: 10px;
+    }
+}
+
+.payment-cart-footer {
+    @include cart-footer;
+}
+
+.dis {
+    width: 75%;
+    float: left;
+    height: auto;
+    margin-top: 116vh;
+}
+
+.dis-mobile {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}

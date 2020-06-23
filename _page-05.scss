@@ -1,0 +1,52 @@
+.top-banner {
+    @include banner;
+    top: 75px;
+    position: relative;
+
+}
+
+.mid-product {
+    @include product;
+    width: fit-content;
+    align-items: center;
+
+    position: relative;
+    top: 75px;
+    margin: 25px auto;
+
+    ul {
+        margin: 0 auto;
+    }
+}
+
+.similar-pro {
+    @include product;
+    position: relative;
+    justify-content: space-between;
+    top: 55px;
+    display: inline;
+    background-color: white;
+
+
+    .product-collection {
+        padding: 10px 100px;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        padding: 0px 100px;
+        margin: 20px 0;
+    }
+}
+
+.footer-2 {
+    width: 100%;
+    top: 40px;
+    bottom: 0;
+    height: fit-content;
+    border: 1px solid black;
+    @include footer;
+    position: relative;
+}

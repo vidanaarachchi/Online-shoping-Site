@@ -1,0 +1,149 @@
+@include mobile-view-01 {
+
+    * {
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+    }
+
+    //header
+    .header {
+        background-color: $header-color;
+        align-items: center;
+        width: 100%;
+        position: sticky;
+        overflow: hidden;
+        top: 0;
+        z-index: 111;
+
+        .logo {
+            padding: 10px;
+            height: 50px;
+            width: 150px;
+            margin: 0 225px;
+
+            #icon {
+                font-size: 19px;
+                margin: 0 auto;
+            }
+
+            small {
+                @include hide;
+            }
+        }
+
+        nav {
+            background-color: $header-color;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            height: 50px;
+            width: 100%;
+            margin: 0;
+
+            ul {
+                font-size: 15px;
+                padding: 0;
+
+                li {
+                    font-size: 15px;
+                    padding: 5px;
+                }
+
+                .location {
+                    padding-right: 0;
+                    padding-left: 10px;
+                }
+            }
+
+
+        }
+    }
+
+    //search bar
+    .search-bar {
+        background-color: $header-color;
+        height: 50px;
+        width: 100%;
+
+        span {
+            @include hide;
+        }
+
+        .search-box {
+            width: 300px;
+            margin-left: 60px;
+        }
+
+        #s-icon {
+
+            align-items: center;
+            display: flex;
+            width: 275px;
+        }
+
+    }
+
+    //side menu toggle
+    label {
+
+        #btn {
+            left: 15px;
+            top: 105px;
+        }
+
+        #cancel {
+            @include cancel;
+            top: 155px;
+        }
+    }
+
+    .side-menu {
+        @include side-menu;
+        top: 152px;
+    }
+
+
+    .left-column {
+        width: 100%;
+
+        h2 {
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+
+    }
+
+    .product-collection {
+        display: flex;
+        overflow-x: scroll;
+
+        p {
+            font-size: 15px;
+        }
+
+        small {
+            font-size: 15px;
+        }
+
+        button {
+            font-size: 14px;
+        }
+
+        ul {
+            margin: 0 10px;
+        }
+    }
+
+    .right-column {
+        @include hide;
+    }
+
+    .para {
+        font-size: 15px;
+    }
+
+    .footer {
+        @include mobile-footer;
+    }
+}

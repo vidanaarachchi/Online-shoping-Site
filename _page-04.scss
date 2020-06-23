@@ -1,0 +1,47 @@
+//page 04 styling
+
+.top-h2-btn {
+    display: flex;
+    margin-top: 55px;
+    justify-content: space-between;
+    padding: 25px 25px 10px;
+
+    input {
+        font-size: 18px;
+        height: 50px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: white;
+
+        &:hover {
+            color: white;
+            background-color: $header-color;
+        }
+    }
+}
+
+.h2-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px 10px;
+
+    input {
+        font-size: 18px;
+        height: 50px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: white;
+
+        &:hover {
+            color: white;
+            background-color: $header-color;
+        }
+    }
+}
+
+.pro-sliding {
+    padding: 10px 25px;
+    
+  
+}
+

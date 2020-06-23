@@ -1,0 +1,63 @@
+.header {
+    background-color: $header-color;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    z-index: 111;
+
+
+    .logo {
+        padding: 15px;
+        float: left;
+        color: $light-color;
+
+        #icon {
+            font-size: 25px;
+            display: flex;
+        }
+
+        small {
+            padding: 0px 0px 0px 35px;
+            display: flex;
+            width: 175px;
+        }
+    }
+
+    nav {
+        overflow: hidden;
+        background-color: $header-color;
+        float: right;
+        margin: 10px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                font-size: 20px;
+                padding: 15px;
+                color: $light-color;
+
+                /** remove a style **/
+                a {
+                    color: $light-color;
+                }
+
+                a:hover {
+                    color: $dark-color;
+                }
+            }
+
+            .location {
+                padding-right: 70px;
+                color: $light-color;
+            }
+        }
+    }
+}

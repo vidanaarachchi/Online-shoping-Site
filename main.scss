@@ -1,0 +1,122 @@
+@import 'config';
+@import 'header';
+@import 'search-bar';
+@import 'cart';
+@import 'page-03';
+@import 'top-nav';
+@import 'page-05';
+@import 'page-06';
+@import 'page-04';
+@import 'page-02';
+@import 'slide';
+
+
+
+/** Web Page **/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/** Body **/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/** Header **/
+
+.row {
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+}
+
+.left-column {
+    float: left;
+    width: 75%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.right-column {
+    width: 25%;
+    height: 100%;
+    float: right;
+    overflow-x: hidden;
+}
+
+
+.card {
+    @include card;
+}
+
+/** !!!!!!!! product-collection !!!!!!!!! **/
+.product-collection {
+    @include product;
+}
+
+h2 {
+    padding: 5px 20px;
+    margin: 10px 5px 0;
+}
+
+#top-h2 {
+    margin-top: 53px;
+    padding-top: 5px;
+}
+
+main {
+    position: relative;
+    height: fit-content;
+}
+
+.banner {
+    @include banner;
+}
+
+.para {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/** !!!!!!!! Cart !!!!!!!!! **/
+
+#sec-1 {
+    @include side-img-bg;
+    height: 250px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+}
+
+#sec-2 {
+    @include side-img-bg;
+    height: 700px;
+    margin-top: 5px;
+}
+
+#sec-3 {
+    @include side-img-bg;
+    height: 600px;
+    margin-top: 25px;
+}
+
+
+/** !!!!!!!! Page Footer !!!!!!!!! **/
+.footer {
+    @include footer;
+}
+
+
+/** Mobile responsive **/
+@import 'mobile-01';
+@import 'mobile-02';
+@import 'mobile-03';
+@import 'mobile-05';
+@import 'mobile-06';

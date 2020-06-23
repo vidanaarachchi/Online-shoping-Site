@@ -1,0 +1,12 @@
+@include mobile-view-06 {
+
+    .row {
+        input {
+            margin: 0 20px;
+        }
+    }
+
+    .footer-3 {
+        @include mobile-footer;
+    }
+}

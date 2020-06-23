@@ -1,0 +1,19 @@
+.cart {
+    margin-top: 53px;
+}
+
+.cart-title {
+    @include cart-title;
+}
+
+hr {
+    @include hr;
+}
+
+.cart-items {
+    @include cart-items;
+}
+
+.cart-footer {
+    @include cart-footer;
+}

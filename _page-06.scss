@@ -1,0 +1,107 @@
+.cart-expand {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    margin: 20px auto;
+    top: 100px;
+    list-style-type: none;
+    //border: 1px solid $dark-color;
+    padding: 10px;
+    background-color: $light-color;
+
+    .row {
+        justify-content: space-between;
+        position: relative;
+        background-color: $light-color;
+        display: flex;
+        padding: 5px 10px;
+
+        input {
+            width: 300px;
+            height: 40px;
+            border: 1px solid $dark-color;
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: $btn-light;
+
+            &:hover {
+                background-color: $btn-dark;
+                color: $light-color;
+            }
+        }
+    }
+
+    .cart {
+        width: 100%;
+        // border: 1px solid $dark-color;
+        border-bottom: 2px solid $dark-color;
+        display: flexbox;
+        float: left;
+        padding: 10px;
+        margin-top: 10px;
+        height: fit-content;
+
+        ul {
+            @include card;
+            // border: 1px solid $dark-color;
+            list-style-type: none;
+            margin: 10px auto;
+            width: 100%;
+            display: flexbox;
+
+            li {
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+            border: 1px solid $dark-color;
+        }
+    }
+
+
+    .total {
+        float: right;
+        padding: 20px;
+        position: relative;
+        width: 100%;
+        text-align: right;
+        font-weight: 600;
+    }
+
+
+
+    .bttn {
+        padding: 20px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+
+        input {
+            font-size: 18px;
+            height: 50px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: white;
+
+            &:hover {
+                color: white;
+                background-color: $header-color;
+            }
+        }
+    }
+
+
+}
+
+.footer-3 {
+    @include footer;
+    position: relative;
+    top: 75px;
+}
